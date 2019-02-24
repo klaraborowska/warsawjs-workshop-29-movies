@@ -255,7 +255,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  page-home works!\n</p>\n"
+module.exports = "<ul>\n  <li><a href=\"\" routerLink=\"videos/videoList\">VideoList</a></li>\n  <li><a href=\"\" routerLink=\"videos/videoNotFound\">Video Not Found</a></li>\n  <li><a href=\"\" routerLink=\"videos/videoProfile\">Video Profile</a></li>\n</ul>"
 
 /***/ }),
 
