@@ -50,6 +50,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _components_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/page-home/page-home.component */ "./src/app/components/page-home/page-home.component.ts");
+/* harmony import */ var _components_page_video_not_found_page_video_not_found_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/page-video-not-found/page-video-not-found.component */ "./src/app/components/page-video-not-found/page-video-not-found.component.ts");
+
 
 
 
@@ -67,6 +69,10 @@ var routes = [
     {
         path: 'videos',
         loadChildren: './logic/logic.module#LogicModule'
+    },
+    {
+        path: '**',
+        component: _components_page_video_not_found_page_video_not_found_component__WEBPACK_IMPORTED_MODULE_5__["PageVideoNotFoundComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -147,6 +153,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _components_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/page-home/page-home.component */ "./src/app/components/page-home/page-home.component.ts");
 /* harmony import */ var _components_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/page-contact/page-contact.component */ "./src/app/components/page-contact/page-contact.component.ts");
+/* harmony import */ var _components_page_video_not_found_page_video_not_found_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/page-video-not-found/page-video-not-found.component */ "./src/app/components/page-video-not-found/page-video-not-found.component.ts");
+
 
 
 
@@ -163,7 +171,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _components_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_6__["PageHomeComponent"],
-                _components_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_7__["PageContactComponent"]
+                _components_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_7__["PageContactComponent"],
+                _components_page_video_not_found_page_video_not_found_component__WEBPACK_IMPORTED_MODULE_8__["PageVideoNotFoundComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -255,7 +264,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\n  <li><a href=\"\" routerLink=\"videos/videoList\">VideoList</a></li>\n  <li><a href=\"\" routerLink=\"videos/videoNotFound\">Video Not Found</a></li>\n  <li><a href=\"\" routerLink=\"videos/videoProfile\">Video Profile</a></li>\n</ul>"
+module.exports = "<ul>\n  <li><a href=\"\" routerLink=\"videos/videoList\">VideoList</a></li>\n  <li><a href=\"\" routerLink=\"videos/videoProfile\">Video Profile</a></li>\n</ul>"
 
 /***/ }),
 
@@ -287,6 +296,62 @@ var PageHomeComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], PageHomeComponent);
     return PageHomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/page-video-not-found/page-video-not-found.component.css":
+/*!************************************************************************************!*\
+  !*** ./src/app/components/page-video-not-found/page-video-not-found.component.css ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZS12aWRlby1ub3QtZm91bmQvcGFnZS12aWRlby1ub3QtZm91bmQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/page-video-not-found/page-video-not-found.component.html":
+/*!*************************************************************************************!*\
+  !*** ./src/app/components/page-video-not-found/page-video-not-found.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  page-video-not-found works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/page-video-not-found/page-video-not-found.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/components/page-video-not-found/page-video-not-found.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: PageVideoNotFoundComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageVideoNotFoundComponent", function() { return PageVideoNotFoundComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PageVideoNotFoundComponent = /** @class */ (function () {
+    function PageVideoNotFoundComponent() {
+    }
+    PageVideoNotFoundComponent.prototype.ngOnInit = function () {
+    };
+    PageVideoNotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-page-video-not-found',
+            template: __webpack_require__(/*! ./page-video-not-found.component.html */ "./src/app/components/page-video-not-found/page-video-not-found.component.html"),
+            styles: [__webpack_require__(/*! ./page-video-not-found.component.css */ "./src/app/components/page-video-not-found/page-video-not-found.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PageVideoNotFoundComponent);
+    return PageVideoNotFoundComponent;
 }());
 
 
