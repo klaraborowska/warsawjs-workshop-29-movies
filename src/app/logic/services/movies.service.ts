@@ -14,4 +14,12 @@ export class MoviesService {
   fetchMovies() {
     return this.http.get<Movies>(environment.moviesURL).toPromise();
   }
+
+  async fetchMovieById(movieId) {
+    const list = await this.fetchMovies();
+    const movie =  list.find((movie)=>{
+      return movie.id === movieId;
+    })
+    return movie;
+  }
 }
