@@ -5,11 +5,15 @@ import { CommonModule } from '@angular/common';
 import { PageVideoListComponent } from './components/page-video-list/page-video-list.component';
 import { PageVideoProfileComponent } from './components/page-video-profile/page-video-profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VideoListComponent } from './components/page-video-list/video-list/video-list.component';
+import { VideoListItemComponent } from './components/page-video-list/video-list-item/video-list-item.component';
 
 @NgModule({
   declarations: [
     PageVideoListComponent, 
-    PageVideoProfileComponent,
+    PageVideoProfileComponent, 
+    VideoListComponent, 
+    VideoListItemComponent,
 
   ],
   imports: [
@@ -17,10 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     LogicRoutingModule,
     HttpClientModule
   ],
-  exports: [
-    PageVideoListComponent, 
-    PageVideoProfileComponent],
-  
-    providers: [MoviesService]
+
+  providers: [MoviesService]
 })
 export class LogicModule { }

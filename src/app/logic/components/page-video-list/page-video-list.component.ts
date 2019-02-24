@@ -1,5 +1,5 @@
+import { Movies } from './../../interfaces/movies.interface';
 import { MoviesService } from './../../services/movies.service';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './page-video-list.component.html',
   styleUrls: ['./page-video-list.component.css']
 })
+
 export class PageVideoListComponent implements OnInit {
 
   constructor(private moviesService: MoviesService) { }
 
+  public movies: Movies = null;
+
   ngOnInit() {
+    this.getMovies();
   }
 
   async getMovies() {
-    const response = await this.moviesService.fetchMovies();
-    console.log(response)
-    return response;
+    this.movies = await this.moviesService.fetchMovies();
   }
 }
