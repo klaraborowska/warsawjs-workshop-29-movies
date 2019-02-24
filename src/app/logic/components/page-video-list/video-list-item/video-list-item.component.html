@@ -1,5 +1,10 @@
-<div [id]="movie.id">
-  <img [src]="movie.imageUrl" alt="">
-  <p>{{movie.title}}</p>
-  <p>{{movie.description}}</p>
+<div class="card">
+  <img [src]="movie.imageUrl" class="card-img-top">
+  <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">{{ movie.description }}</p>
+      <a [routerLink]="'/movies/' + movie.id" class="btn btn-primary">
+        Details
+      </a>
+  </div>
 </div>

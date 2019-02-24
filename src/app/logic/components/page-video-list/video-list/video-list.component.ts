@@ -12,9 +12,4 @@ export class VideoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngOnChanges() {
-  }
-
-
-
 }
