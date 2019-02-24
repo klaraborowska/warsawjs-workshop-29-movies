@@ -22,4 +22,8 @@ export class MoviesService {
     })
     return movie;
   }
+
+  fetchLatestMovies() {
+    return this.http.get<Movies>(environment.latestMoviesURL).toPromise();
+  }
 }

@@ -1,3 +1,5 @@
+import { Movies } from './../../logic/interfaces/movies.interface';
+import { MoviesService } from './../../logic/services/movies.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private moviesService: MoviesService) { }
+
+  movies: Movies = null;
 
   ngOnInit() {
+    this.fetchLatestMovies();
   }
 
+  async fetchLatestMovies() {
+    this.movies = await this.moviesService.fetchLatestMovies();
+  }
 }

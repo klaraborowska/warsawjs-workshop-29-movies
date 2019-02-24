@@ -1,3 +1,13 @@
-<ul>
-  <li><a href="" routerLink="videos/videoList">VideoList</a></li>
-</ul>
+<a href="" routerLink="videos/videoList">All Movies</a>
+
+<p>Latest Movies:</p>
+<div class="card" *ngFor="let movie of movies">
+  <img [src]="movie.imageUrl" class="card-img-top">
+  <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">{{ movie.description }}</p>
+      <a [routerLink]="'/videos/' + movie.id" class="btn btn-primary">
+        Details
+      </a>
+  </div>
+</div>
