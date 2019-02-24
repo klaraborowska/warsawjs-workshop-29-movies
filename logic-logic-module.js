@@ -2079,7 +2079,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\">\n  <img [src]=\"movie.imageUrl\" class=\"card-img-top\">\n  <div class=\"card-body\">\n      <h5 class=\"card-title\">{{ movie.title }}</h5>\n      <p class=\"card-text\">{{ movie.description }}</p>\n      <a [routerLink]=\"'/movies/' + movie.id\" class=\"btn btn-primary\">\n        Details\n      </a>\n  </div>\n</div>"
+module.exports = "<div class=\"card\">\n  <img [src]=\"movie.imageUrl\" class=\"card-img-top\">\n  <div class=\"card-body\">\n      <h5 class=\"card-title\">{{ movie.title }}</h5>\n      <p class=\"card-text\">{{ movie.description }}</p>\n      <a [routerLink]=\"'/videos/' + movie.id\" class=\"btn btn-primary\">\n        Details\n      </a>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2263,7 +2263,7 @@ var routes = [
         component: _components_page_video_list_page_video_list_component__WEBPACK_IMPORTED_MODULE_1__["PageVideoListComponent"]
     },
     {
-        path: 'videoProfile',
+        path: ':id',
         component: _components_page_video_profile_page_video_profile_component__WEBPACK_IMPORTED_MODULE_4__["PageVideoProfileComponent"]
     }
 ];
