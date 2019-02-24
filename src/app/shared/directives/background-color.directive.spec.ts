@@ -1,4 +1,4 @@
-import { BackgroundColorDirective } from './background-color.directive';
+import { BackgroundColorDirective } from '../../background-color.directive';
 
 describe('BackgroundColorDirective', () => {
   it('should create an instance', () => {
