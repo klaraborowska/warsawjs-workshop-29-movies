@@ -2030,7 +2030,18 @@ var PageVideoListComponent = /** @class */ (function () {
     PageVideoListComponent.prototype.ngOnInit = function () {
     };
     PageVideoListComponent.prototype.getMovies = function () {
-        this.moviesService.fetchMovies();
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var response;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.moviesService.fetchMovies()];
+                    case 1:
+                        response = _a.sent();
+                        console.log(response);
+                        return [2 /*return*/, response];
+                }
+            });
+        });
     };
     PageVideoListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
@@ -2216,6 +2227,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -2228,10 +2241,9 @@ var MoviesService = /** @class */ (function () {
             var response;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.http.get('assets/data.json').toPromise()];
+                    case 0: return [4 /*yield*/, this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].moviesURL).toPromise()];
                     case 1:
                         response = _a.sent();
-                        console.log(response);
                         return [2 /*return*/, response];
                 }
             });
