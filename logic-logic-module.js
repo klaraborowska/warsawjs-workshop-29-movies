@@ -2232,7 +2232,7 @@ var MoviesService = /** @class */ (function () {
                     case 1:
                         response = _a.sent();
                         console.log(response);
-                        return [2 /*return*/];
+                        return [2 /*return*/, response];
                 }
             });
         });
