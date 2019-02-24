@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,8 +11,8 @@ export class MoviesService {
   constructor(private http: HttpClient) { }
 
   async fetchMovies() {
-    const response = await this.http.get('assets/data.json').toPromise();
-    console.log(response);
+    const response = await this.http.get(environment.moviesURL).toPromise();
+
     return response;
   }
 }

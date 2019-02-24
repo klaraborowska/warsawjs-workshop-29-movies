@@ -14,7 +14,9 @@ export class PageVideoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  getMovies() {
-    this.moviesService.fetchMovies();
+  async getMovies() {
+    const response = await this.moviesService.fetchMovies();
+    console.log(response)
+    return response;
   }
 }
