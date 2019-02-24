@@ -2079,7 +2079,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [id]=\"movie.id\">\n  <img [src]=\"movie.imageUrl\" alt=\"\">\n  <p>{{movie.title}}</p>\n  <p>{{movie.description}}</p>\n</div>"
+module.exports = "<div class=\"card\">\n  <img [src]=\"movie.imageUrl\" class=\"card-img-top\">\n  <div class=\"card-body\">\n      <h5 class=\"card-title\">{{ movie.title }}</h5>\n      <p class=\"card-text\">{{ movie.description }}</p>\n      <a [routerLink]=\"'/movies/' + movie.id\" class=\"btn btn-primary\">\n        Details\n      </a>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2162,8 +2162,6 @@ var VideoListComponent = /** @class */ (function () {
     function VideoListComponent() {
     }
     VideoListComponent.prototype.ngOnInit = function () {
-    };
-    VideoListComponent.prototype.ngOnChanges = function () {
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
