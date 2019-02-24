@@ -7,12 +7,14 @@ import { SharedModule } from './shared/shared.module';
 import { LogicModule } from './logic/logic.module';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageContactComponent } from './components/page-contact/page-contact.component';
+import { PageVideoNotFoundComponent } from './components/page-video-not-found/page-video-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageHomeComponent, 
-    PageContactComponent
+    PageContactComponent,
+    PageVideoNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { PageContactComponent } from './components/page-contact/page-contact.com
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageHomeComponent } from './components/page-home/page-home.component';
+import { PageVideoNotFoundComponent } from './components/page-video-not-found/page-video-not-found.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'videos',
     loadChildren: './logic/logic.module#LogicModule'
+  },
+  {
+    path: '**',
+    component: PageVideoNotFoundComponent
   }
 ];
 
