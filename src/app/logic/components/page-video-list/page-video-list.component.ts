@@ -13,6 +13,8 @@ export class PageVideoListComponent implements OnInit {
   constructor(private moviesService: MoviesService) { }
 
   public movies: Movies = null;
+  public moviesCopy: Movies = null;
+  
 
   ngOnInit() {
     this.getMovies();
@@ -20,5 +22,12 @@ export class PageVideoListComponent implements OnInit {
 
   async getMovies() {
     this.movies = await this.moviesService.fetchMovies();
+    this.moviesCopy = await this.movies;
+  }
+
+  onKey(val) {
+    this.movies = this.moviesCopy.filter(el => {
+      return el.title.toLowerCase().includes(val);
+    })
   }
 }

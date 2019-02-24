@@ -1,2 +1,5 @@
 <p>Videos:</p>
+
+<label for="search">Filter movies by title</label>
+<input #searchMovies type="text" id="search" (keyup)="onKey(searchMovies.value)">
 <app-video-list [movies]="movies"></app-video-list>
